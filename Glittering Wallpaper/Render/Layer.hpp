@@ -1,6 +1,6 @@
 //
 //  Layer.h
-//  Glittering Wallpaper
+//  Wallpaper
 //
 //  Created by mutexre on 06/09/16.
 //
@@ -11,10 +11,11 @@
 struct Layer
 {
 protected:
+    shared_ptr<Grid> grid;
+    
     struct
     {
         vector<vec3> coords;
-        vector<vec2> pos;
         vector<vec4> colors;
         vector<int> indices;
     }
@@ -24,39 +25,34 @@ protected:
     {
         GLuint indices = 0;
         GLuint coords = 0;
-        GLuint pos = 0;
         GLuint colors = 0;
     }
     buffers;
     
     GLuint vao = 0;
     GLenum mode;
+    bool useIndicesArray = false;
     
     shared_ptr<Program> program;
-    mat3 transform;
-    float speed = 1;
+    mat3 transform, uvTransform;
 
 protected:
-    void clearData()
-    {
-        data.indices.clear();
-        data.coords.clear();
-        data.pos.clear();
-        data.colors.clear();
-    }
-
-    void prepareForRender(double t, int frame)
+    void prepareForRender()
     {
         program->bind();
-        program->setUniform("transform", transform);
-        program->setUniform("t", float(t));
-        program->setUniform("frame", frame);
-        program->setUniform("speed", speed);
+        
+        if (program->isUniformActive("transform"))
+            program->setUniform("transform", transform);
+        
+        if (program->isUniformActive("uvTransform"))
+            program->setUniform("uvTransform", uvTransform);
+        
         glBindVertexArray(vao);
     }
 
 public:
-    Layer(GLenum mode) {
+    Layer(const shared_ptr<Grid>& grid, GLenum mode) {
+        this->grid = grid;
         this->mode = mode;
     }
     
@@ -72,50 +68,76 @@ public:
         transform = m;
     }
     
-    void setSpeed(float s) {
-        speed = s;
+    void setUVTransform(const mat3& m) {
+        uvTransform = m;
     }
     
-    virtual void initData(const Model& model) = 0;
+    void clearData()
+    {
+        data.indices.clear();
+        data.coords.clear();
+        data.colors.clear();
+    }
     
-    void initBuffers()
+    void clearColorData() {
+        data.colors.clear();
+    }
+    
+    void allocBuffers(size_t vertexCount, size_t indexCount)
     {
         glGenVertexArrays(1, &vao);
-        glGenBuffers(4, (GLuint*)&buffers);
+        glGenBuffers(3, (GLuint*)&buffers);
         
         glBindVertexArray(vao);
         
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffers.indices);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, data.indices.size() * sizeof(unsigned), data.indices.data(), GL_STATIC_DRAW);
+        if (indexCount > 0)
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexCount * sizeof(unsigned), nullptr, GL_STATIC_DRAW);
         
         auto coordAttr = program->getAttributeLocation("coord");
         glBindBuffer(GL_ARRAY_BUFFER, buffers.coords);
         glEnableVertexAttribArray(coordAttr);
         glVertexAttribPointer(coordAttr, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
-        glBufferData(GL_ARRAY_BUFFER, data.coords.size() * sizeof(vec3), data.coords.data(), GL_STATIC_DRAW);
-        
-        auto posAttr = program->getAttributeLocation("pos");
-        glBindBuffer(GL_ARRAY_BUFFER, buffers.pos);
-        glEnableVertexAttribArray(posAttr);
-        glVertexAttribPointer(posAttr, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
-        glBufferData(GL_ARRAY_BUFFER, data.pos.size() * sizeof(vec2), data.pos.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(vec3), nullptr, GL_STATIC_DRAW);
         
         auto colorAttr = program->getAttributeLocation("color");
         glBindBuffer(GL_ARRAY_BUFFER, buffers.colors);
         glEnableVertexAttribArray(colorAttr);
         glVertexAttribPointer(colorAttr, 4, GL_FLOAT, GL_FALSE, 0, nullptr);
-        glBufferData(GL_ARRAY_BUFFER, data.colors.size() * sizeof(vec4), data.colors.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(vec4), nullptr, GL_DYNAMIC_DRAW);
+    }
+    
+    void syncIndices()
+    {
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffers.indices);
+        glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, data.indices.size() * sizeof(unsigned), data.indices.data());
+    }
+    
+    void syncCoords()
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, buffers.coords);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, data.coords.size() * sizeof(vec3), data.coords.data());
+    }
+    
+    void syncColors()
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, buffers.colors);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, data.colors.size() * sizeof(vec4), data.colors.data());
     }
     
     void releaseBuffers()
     {
         glDeleteVertexArrays(1, &vao);
-        glDeleteBuffers(4, reinterpret_cast<GLuint*>(&buffers));
+        glDeleteBuffers(3, reinterpret_cast<GLuint*>(&buffers));
     }
     
-    virtual void render(double t, int frame)
+    virtual void render()
     {
-        prepareForRender(t, frame);
-        glDrawElements(mode, GLsizei(data.indices.size()), GL_UNSIGNED_INT, nullptr);
+        prepareForRender();
+        
+        if (useIndicesArray)
+            glDrawElements(mode, GLsizei(data.indices.size()), GL_UNSIGNED_INT, nullptr);
+        else
+            glDrawArrays(mode, 0, GLsizei(data.coords.size()));
     }
 };

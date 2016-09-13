@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921982371D881AEC00F6DE5F /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 921982361D881AEC00F6DE5F /* Edge.cpp */; };
+		9219823A1D881B1100F6DE5F /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 921982381D881B1100F6DE5F /* Triangle.cpp */; };
 		923CFC831D7C3DA900DA7A77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CFC821D7C3DA900DA7A77 /* main.m */; };
 		923CFC861D7C3DA900DA7A77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CFC851D7C3DA900DA7A77 /* AppDelegate.m */; };
 		923CFC891D7C3DA900DA7A77 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923CFC881D7C3DA900DA7A77 /* ViewController.mm */; };
@@ -17,17 +19,21 @@
 		923CFCA41D7C9E6100DA7A77 /* Helper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923CFC9E1D7C9E6100DA7A77 /* Helper.mm */; };
 		923CFCA51D7C9E6100DA7A77 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923CFCA01D7C9E6100DA7A77 /* Program.cpp */; };
 		923CFCA61D7C9E6100DA7A77 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923CFCA21D7C9E6100DA7A77 /* Texture.cpp */; };
-		923CFDB41D7DFB7300DA7A77 /* Points.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 923CFDB31D7DFB7300DA7A77 /* Points.vsh */; };
+		923CFDB41D7DFB7300DA7A77 /* Vertex.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 923CFDB31D7DFB7300DA7A77 /* Vertex.vsh */; };
 		923CFDBC1D7F7C4F00DA7A77 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */; };
+		92523EBE1D836DE7001F3938 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92523EBD1D836DE7001F3938 /* Vertex.cpp */; };
+		92523EC11D847207001F3938 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92523EC01D847207001F3938 /* Graph.cpp */; };
+		926A38111D81BB8A00823839 /* TexturedTriangles.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 926A38101D81BB8A00823839 /* TexturedTriangles.fsh */; };
 		927D8A261D805F1900A6BA38 /* Fragment.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A251D805F1900A6BA38 /* Fragment.fsh */; };
-		927D8A281D805F2700A6BA38 /* Lines.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A271D805F2700A6BA38 /* Lines.vsh */; };
-		927D8A2A1D80774600A6BA38 /* Triangles.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A291D80774600A6BA38 /* Triangles.vsh */; };
-		927D8A2C1D807AAE00A6BA38 /* galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A2B1D807AAE00A6BA38 /* galaxy.jpg */; };
-		927D8A2F1D807BDD00A6BA38 /* Triangles.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A2E1D807BDD00A6BA38 /* Triangles.fsh */; };
+		927D8A2A1D80774600A6BA38 /* TexturedTriangles.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 927D8A291D80774600A6BA38 /* TexturedTriangles.vsh */; };
+		92E7C5151D8177E3008F62CD /* hieroglyphs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92E7C5141D8177E3008F62CD /* hieroglyphs.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		923CFC7F1D7C3DA900DA7A77 /* Glittering Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glittering Wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		921982361D881AEC00F6DE5F /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Edge.cpp; path = Model/Edge.cpp; sourceTree = "<group>"; };
+		921982381D881B1100F6DE5F /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Triangle.cpp; path = Model/Triangle.cpp; sourceTree = "<group>"; };
+		921982391D881B1100F6DE5F /* Triangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Triangle.hpp; path = Model/Triangle.hpp; sourceTree = "<group>"; };
+		923CFC7F1D7C3DA900DA7A77 /* Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923CFC821D7C3DA900DA7A77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		923CFC841D7C3DA900DA7A77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		923CFC851D7C3DA900DA7A77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -301,19 +307,25 @@
 		923CFDA71D7CA76C00DA7A77 /* vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vec3.hpp; sourceTree = "<group>"; };
 		923CFDA81D7CA76C00DA7A77 /* vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vec4.hpp; sourceTree = "<group>"; };
 		923CFDA91D7CA76C00DA7A77 /* vector_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector_relational.hpp; sourceTree = "<group>"; };
-		923CFDAF1D7DFB6300DA7A77 /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Model.hpp; path = Render/Model.hpp; sourceTree = "<group>"; };
 		923CFDB11D7DFB6300DA7A77 /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Scene.hpp; path = Render/Scene.hpp; sourceTree = "<group>"; };
-		923CFDB31D7DFB7300DA7A77 /* Points.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Points.vsh; path = Shaders/Points.vsh; sourceTree = "<group>"; };
+		923CFDB31D7DFB7300DA7A77 /* Vertex.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Vertex.vsh; path = Shaders/Vertex.vsh; sourceTree = "<group>"; };
 		923CFDB71D7E0D9300DA7A77 /* Layer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Layer.hpp; path = Render/Layer.hpp; sourceTree = "<group>"; };
 		923CFDB81D7E233200DA7A77 /* PointsLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = PointsLayer.hpp; path = Render/PointsLayer.hpp; sourceTree = "<group>"; };
 		923CFDB91D7E308600DA7A77 /* LinesLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LinesLayer.hpp; path = Render/LinesLayer.hpp; sourceTree = "<group>"; };
 		923CFDBA1D7F6E1E00DA7A77 /* TrianglesLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = TrianglesLayer.hpp; path = Render/TrianglesLayer.hpp; sourceTree = "<group>"; };
 		923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		92523EB81D836B39001F3938 /* Edge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Edge.hpp; path = Model/Edge.hpp; sourceTree = "<group>"; };
+		92523EBA1D836B6F001F3938 /* Model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Model.hpp; path = Model/Model.hpp; sourceTree = "<group>"; };
+		92523EBB1D836BAC001F3938 /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Vertex.hpp; path = Model/Vertex.hpp; sourceTree = "<group>"; };
+		92523EBC1D836BB3001F3938 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Model/Graph.hpp; sourceTree = "<group>"; };
+		92523EBD1D836DE7001F3938 /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vertex.cpp; path = Model/Vertex.cpp; sourceTree = "<group>"; };
+		92523EBF1D8456DA001F3938 /* Grid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Grid.hpp; path = Model/Grid.hpp; sourceTree = "<group>"; };
+		92523EC01D847207001F3938 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graph.cpp; path = Model/Graph.cpp; sourceTree = "<group>"; };
+		925EF75F1D86FEDC0010A79F /* Log.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Log.hpp; path = Model/Log.hpp; sourceTree = "<group>"; };
+		926A38101D81BB8A00823839 /* TexturedTriangles.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedTriangles.fsh; path = Shaders/TexturedTriangles.fsh; sourceTree = "<group>"; };
 		927D8A251D805F1900A6BA38 /* Fragment.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Fragment.fsh; path = Shaders/Fragment.fsh; sourceTree = "<group>"; };
-		927D8A271D805F2700A6BA38 /* Lines.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Lines.vsh; path = Shaders/Lines.vsh; sourceTree = "<group>"; };
-		927D8A291D80774600A6BA38 /* Triangles.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Triangles.vsh; path = Shaders/Triangles.vsh; sourceTree = "<group>"; };
-		927D8A2B1D807AAE00A6BA38 /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = galaxy.jpg; path = ../../Downloads/galaxy.jpg; sourceTree = "<group>"; };
-		927D8A2E1D807BDD00A6BA38 /* Triangles.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Triangles.fsh; path = Shaders/Triangles.fsh; sourceTree = "<group>"; };
+		927D8A291D80774600A6BA38 /* TexturedTriangles.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedTriangles.vsh; path = Shaders/TexturedTriangles.vsh; sourceTree = "<group>"; };
+		92E7C5141D8177E3008F62CD /* hieroglyphs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hieroglyphs.jpg; path = "../../Pictures/500px Prime/hieroglyphs.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */,
-				923CFC801D7C3DA900DA7A77 /* Glittering Wallpaper */,
+				923CFC801D7C3DA900DA7A77 /* Wallpaper */,
 				923CFC9C1D7C9E6100DA7A77 /* Helper */,
 				927D8A2D1D807AB100A6BA38 /* Resources */,
 				923CFCA71D7CA76C00DA7A77 /* glm */,
@@ -343,14 +355,15 @@
 		923CFC641D7C3D8F00DA7A77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				923CFC7F1D7C3DA900DA7A77 /* Glittering Wallpaper.app */,
+				923CFC7F1D7C3DA900DA7A77 /* Wallpaper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		923CFC801D7C3DA900DA7A77 /* Glittering Wallpaper */ = {
+		923CFC801D7C3DA900DA7A77 /* Wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				92523EB71D836B10001F3938 /* Model */,
 				923CFDAC1D7DFAEE00DA7A77 /* Shaders */,
 				923CFDAA1D7DEEED00DA7A77 /* Render */,
 				923CFC841D7C3DA900DA7A77 /* AppDelegate.h */,
@@ -365,6 +378,7 @@
 				923CFC921D7C3DA900DA7A77 /* Info.plist */,
 				923CFC811D7C3DA900DA7A77 /* Supporting Files */,
 			);
+			name = Wallpaper;
 			path = "Glittering Wallpaper";
 			sourceTree = "<group>";
 		};
@@ -679,7 +693,6 @@
 		923CFDAA1D7DEEED00DA7A77 /* Render */ = {
 			isa = PBXGroup;
 			children = (
-				923CFDAF1D7DFB6300DA7A77 /* Model.hpp */,
 				923CFDB71D7E0D9300DA7A77 /* Layer.hpp */,
 				923CFDB81D7E233200DA7A77 /* PointsLayer.hpp */,
 				923CFDB91D7E308600DA7A77 /* LinesLayer.hpp */,
@@ -692,19 +705,36 @@
 		923CFDAC1D7DFAEE00DA7A77 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				923CFDB31D7DFB7300DA7A77 /* Points.vsh */,
-				927D8A271D805F2700A6BA38 /* Lines.vsh */,
+				923CFDB31D7DFB7300DA7A77 /* Vertex.vsh */,
 				927D8A251D805F1900A6BA38 /* Fragment.fsh */,
-				927D8A291D80774600A6BA38 /* Triangles.vsh */,
-				927D8A2E1D807BDD00A6BA38 /* Triangles.fsh */,
+				927D8A291D80774600A6BA38 /* TexturedTriangles.vsh */,
+				926A38101D81BB8A00823839 /* TexturedTriangles.fsh */,
 			);
 			name = Shaders;
+			sourceTree = "<group>";
+		};
+		92523EB71D836B10001F3938 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92523EBA1D836B6F001F3938 /* Model.hpp */,
+				925EF75F1D86FEDC0010A79F /* Log.hpp */,
+				92523EBB1D836BAC001F3938 /* Vertex.hpp */,
+				92523EBD1D836DE7001F3938 /* Vertex.cpp */,
+				92523EB81D836B39001F3938 /* Edge.hpp */,
+				921982361D881AEC00F6DE5F /* Edge.cpp */,
+				921982391D881B1100F6DE5F /* Triangle.hpp */,
+				921982381D881B1100F6DE5F /* Triangle.cpp */,
+				92523EBC1D836BB3001F3938 /* Graph.hpp */,
+				92523EC01D847207001F3938 /* Graph.cpp */,
+				92523EBF1D8456DA001F3938 /* Grid.hpp */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		927D8A2D1D807AB100A6BA38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				927D8A2B1D807AAE00A6BA38 /* galaxy.jpg */,
+				92E7C5141D8177E3008F62CD /* hieroglyphs.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -712,9 +742,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		923CFC7E1D7C3DA900DA7A77 /* Glittering Wallpaper */ = {
+		923CFC7E1D7C3DA900DA7A77 /* Wallpaper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 923CFC931D7C3DA900DA7A77 /* Build configuration list for PBXNativeTarget "Glittering Wallpaper" */;
+			buildConfigurationList = 923CFC931D7C3DA900DA7A77 /* Build configuration list for PBXNativeTarget "Wallpaper" */;
 			buildPhases = (
 				923CFC7B1D7C3DA900DA7A77 /* Sources */,
 				923CFC7C1D7C3DA900DA7A77 /* Frameworks */,
@@ -724,9 +754,9 @@
 			);
 			dependencies = (
 			);
-			name = "Glittering Wallpaper";
+			name = Wallpaper;
 			productName = "Glittering Wallpaper";
-			productReference = 923CFC7F1D7C3DA900DA7A77 /* Glittering Wallpaper.app */;
+			productReference = 923CFC7F1D7C3DA900DA7A77 /* Wallpaper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -743,7 +773,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 923CFC5C1D7C3D7F00DA7A77 /* Build configuration list for PBXProject "Glittering Wallpaper" */;
+			buildConfigurationList = 923CFC5C1D7C3D7F00DA7A77 /* Build configuration list for PBXProject "Wallpaper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -756,7 +786,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				923CFC7E1D7C3DA900DA7A77 /* Glittering Wallpaper */,
+				923CFC7E1D7C3DA900DA7A77 /* Wallpaper */,
 			);
 		};
 /* End PBXProject section */
@@ -766,15 +796,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923CFDB41D7DFB7300DA7A77 /* Points.vsh in Resources */,
+				923CFDB41D7DFB7300DA7A77 /* Vertex.vsh in Resources */,
 				923CFC911D7C3DA900DA7A77 /* LaunchScreen.storyboard in Resources */,
 				927D8A261D805F1900A6BA38 /* Fragment.fsh in Resources */,
 				923CFC8E1D7C3DA900DA7A77 /* Assets.xcassets in Resources */,
-				927D8A281D805F2700A6BA38 /* Lines.vsh in Resources */,
-				927D8A2A1D80774600A6BA38 /* Triangles.vsh in Resources */,
-				927D8A2F1D807BDD00A6BA38 /* Triangles.fsh in Resources */,
+				927D8A2A1D80774600A6BA38 /* TexturedTriangles.vsh in Resources */,
+				92E7C5151D8177E3008F62CD /* hieroglyphs.jpg in Resources */,
+				926A38111D81BB8A00823839 /* TexturedTriangles.fsh in Resources */,
 				923CFC8C1D7C3DA900DA7A77 /* Main.storyboard in Resources */,
-				927D8A2C1D807AAE00A6BA38 /* galaxy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,8 +815,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				923CFC891D7C3DA900DA7A77 /* ViewController.mm in Sources */,
+				92523EC11D847207001F3938 /* Graph.cpp in Sources */,
+				92523EBE1D836DE7001F3938 /* Vertex.cpp in Sources */,
 				923CFC981D7C3E5500DA7A77 /* GLView.m in Sources */,
+				921982371D881AEC00F6DE5F /* Edge.cpp in Sources */,
 				923CFCA51D7C9E6100DA7A77 /* Program.cpp in Sources */,
+				9219823A1D881B1100F6DE5F /* Triangle.cpp in Sources */,
 				923CFC861D7C3DA900DA7A77 /* AppDelegate.m in Sources */,
 				923CFCA41D7C9E6100DA7A77 /* Helper.mm in Sources */,
 				923CFCA61D7C9E6100DA7A77 /* Texture.cpp in Sources */,
@@ -874,7 +907,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mutexre.Glittering-Wallpaper";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallpaper;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -918,7 +951,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mutexre.Glittering-Wallpaper";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallpaper;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -928,7 +961,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		923CFC5C1D7C3D7F00DA7A77 /* Build configuration list for PBXProject "Glittering Wallpaper" */ = {
+		923CFC5C1D7C3D7F00DA7A77 /* Build configuration list for PBXProject "Wallpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				923CFC5D1D7C3D7F00DA7A77 /* Debug */,
@@ -937,7 +970,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		923CFC931D7C3DA900DA7A77 /* Build configuration list for PBXNativeTarget "Glittering Wallpaper" */ = {
+		923CFC931D7C3DA900DA7A77 /* Build configuration list for PBXNativeTarget "Wallpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				923CFC941D7C3DA900DA7A77 /* Debug */,

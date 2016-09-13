@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Glittering Wallpaper
+//  Wallpaper
 //
 //  Created by mutexre on 04/09/16.
 //

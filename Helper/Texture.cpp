@@ -35,6 +35,14 @@ Texture::~Texture() {
     if (texture) glDeleteTextures(1, &texture);
 }
 
+unsigned Texture::getW() const {
+    return w;
+}
+
+unsigned Texture::getH() const {
+    return h;
+}
+
 void Texture::bind(unsigned short target) {
     glActiveTexture(GL_TEXTURE0 + target);
     glBindTexture(GLenum(type), texture);

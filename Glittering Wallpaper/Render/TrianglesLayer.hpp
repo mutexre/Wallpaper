@@ -1,6 +1,6 @@
 //
 //  TrianglesLayer.h
-//  Glittering Wallpaper
+//  Wallpaper
 //
 //  Created by mutexre on 07/09/16.
 //
@@ -10,36 +10,40 @@
 
 class TrianglesLayer : public Layer
 {
+private:
+    std::function<vec4(Triangle*)> colorFunc;
+
 public:
-    virtual void initData(const Model& model)
+    TrianglesLayer(const shared_ptr<Grid>& grid,
+                   const std::function<vec4(Triangle*)>& colorFunc)
+     : Layer(grid, GL_TRIANGLES)
     {
-        clearData();
-        
-        int index = 0;
-        vec4 color = model.getTriangleColor();
-        
-        for (int row = 0; row < model.rows; row++)
+        this->colorFunc = colorFunc;
+    }
+    
+    void copyCoords()
+    {
+        auto& triangles = grid->getTriangles();
+        for (Triangle* tri : triangles)
         {
-            for (int col = 0; col < model.columns; col++)
+            for (int i = 0; i < 3; i++)
             {
-                for (int i = 0; i < 2; i++) {
-                    for (int j = 0; j < 2; j++) {
-                        vec2 xy = model.getCoord(row + i, col + j);
-                        data.coords.push_back(vec3(xy, 1));
-                        data.colors.push_back(color);
-                    }
-                }
-                
-                data.indices.push_back(index);
-                data.indices.push_back(index + 1);
-                data.indices.push_back(index + 3);
-                
-                data.indices.push_back(index);
-                data.indices.push_back(index + 3);
-                data.indices.push_back(index + 2);
-                
-                index += 4;
+                Vertex* v = tri->getVertex(i);
+                ivec2 pos = v->getPosition();
+                vec2 coord = grid->getVertexCoord(pos.x, pos.y);
+                data.coords.push_back(vec3(coord, 1));
             }
+        }
+    }
+    
+    void copyColors(const vec4& color)
+    {
+        auto& triangles = grid->getTriangles();
+        for (Triangle* triangle : triangles)
+        {
+            vec4 color = colorFunc(triangle);
+            for (int i = 0; i < 3; i++)
+                data.colors.push_back(color);
         }
     }
 };

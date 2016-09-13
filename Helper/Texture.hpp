@@ -34,6 +34,9 @@ public:
     Texture(const void* data, unsigned w, unsigned h);
     virtual ~Texture();
 
+    unsigned getW() const;
+    unsigned getH() const;
+
     void bind(unsigned short target = 0);
     void texImage(const void* data, GLint format, unsigned w, unsigned h);
 };
