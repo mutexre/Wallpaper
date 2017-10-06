@@ -20,7 +20,6 @@
 		923CFCA51D7C9E6100DA7A77 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923CFCA01D7C9E6100DA7A77 /* Program.cpp */; };
 		923CFCA61D7C9E6100DA7A77 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923CFCA21D7C9E6100DA7A77 /* Texture.cpp */; };
 		923CFDB41D7DFB7300DA7A77 /* Vertex.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 923CFDB31D7DFB7300DA7A77 /* Vertex.vsh */; };
-		923CFDBC1D7F7C4F00DA7A77 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */; };
 		92523EBE1D836DE7001F3938 /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92523EBD1D836DE7001F3938 /* Vertex.cpp */; };
 		92523EC11D847207001F3938 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92523EC01D847207001F3938 /* Graph.cpp */; };
 		926A38111D81BB8A00823839 /* TexturedTriangles.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 926A38101D81BB8A00823839 /* TexturedTriangles.fsh */; };
@@ -313,7 +312,6 @@
 		923CFDB81D7E233200DA7A77 /* PointsLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = PointsLayer.hpp; path = Render/PointsLayer.hpp; sourceTree = "<group>"; };
 		923CFDB91D7E308600DA7A77 /* LinesLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LinesLayer.hpp; path = Render/LinesLayer.hpp; sourceTree = "<group>"; };
 		923CFDBA1D7F6E1E00DA7A77 /* TrianglesLayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = TrianglesLayer.hpp; path = Render/TrianglesLayer.hpp; sourceTree = "<group>"; };
-		923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		92523EB81D836B39001F3938 /* Edge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Edge.hpp; path = Model/Edge.hpp; sourceTree = "<group>"; };
 		92523EBA1D836B6F001F3938 /* Model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Model.hpp; path = Model/Model.hpp; sourceTree = "<group>"; };
 		92523EBB1D836BAC001F3938 /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Vertex.hpp; path = Model/Vertex.hpp; sourceTree = "<group>"; };
@@ -333,7 +331,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923CFDBC1D7F7C4F00DA7A77 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +340,6 @@
 		923CFC581D7C3D7F00DA7A77 = {
 			isa = PBXGroup;
 			children = (
-				923CFDBB1D7F7C4F00DA7A77 /* Accelerate.framework */,
 				923CFC801D7C3DA900DA7A77 /* Wallpaper */,
 				923CFC9C1D7C9E6100DA7A77 /* Helper */,
 				927D8A2D1D807AB100A6BA38 /* Resources */,
@@ -769,7 +765,7 @@
 				TargetAttributes = {
 					923CFC7E1D7C3DA900DA7A77 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 859799LX22;
+						DevelopmentTeam = WBWE6BMMKE;
 					};
 				};
 			};
@@ -884,6 +880,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WBWE6BMMKE;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -935,6 +932,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WBWE6BMMKE;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

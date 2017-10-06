@@ -67,21 +67,6 @@ private:
 
         for (Edge* e : edges)
             e->radiateAccumulatedEnergy(t);
-        
-        /*for (Triangle* tri : triangles)
-        {
-            float totalVertexEnergy = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                Vertex* v = tri->getVertex(i);
-                float vertexEnergy = v->getEnergy();
-                if (v->isGenerator())
-                    vertexEnergy *= 0.75;
-                totalVertexEnergy += vertexEnergy;
-            }
-            
-            tri->getEnergyLog().add(totalVertexEnergy / 3.0f);
-        }*/
     }
     
     void resetAccumulatedEnergy()
